@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url
-from . import view
+from django.conf.urls import *
+from . import view,testmysql
 
 urlpatterns = [
     url(r'^hello$', view.hello),
     path('admin/', admin.site.urls),
+    url(r'^test$', testmysql.testmysql),
 ]
